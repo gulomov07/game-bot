@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA — Learn Beyond</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+    <div class="preloader-logo">N<span>.</span></div>
+    <p>THINK BEYOND.</p>
+</div>
+
+<header class="header">
+    <a class="logo" href="#home">NEXORA<span>®</span></a>
+
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#explore">Explore</a>
+        <a href="#learning">My learning</a>
+        <a href="#community">Community</a>
+    </nav>
+
+    <div class="header-right">
+        <button id="themeBtn" class="icon-btn">☾</button>
+        <button id="profileBtn" class="profile-btn">Join NEXORA ↗</button>
+        <button id="menuBtn" class="menu-btn">☰</button>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-top">
+        <span>EST. 2026 — DIGITAL ACADEMY</span>
+        <span>01 / 04</span>
+    </div>
+
+    <div class="hero-title">
+        <h1>LEARN<br>BEYOND<span>.</span></h1>
+        <div class="hero-side">
+            <div class="orbit">✳</div>
+            <p>Knowledge is not a destination. It's a way of thinking.</p>
+        </div>
+    </div>
+
+    <div class="hero-bottom">
+        <p>Kelajagingizni yangi bilimlar bilan yarating. Chegaralarni unuting. O'rganishni boshlang.</p>
+        <a href="#explore" class="explore-btn">EXPLORE COURSES <span>↗</span></a>
+    </div>
+
+    <div class="hero-art">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-center">N<span>.</span></div>
+        <div class="art-label">YOUR NEXT CHAPTER<br>STARTS HERE.</div>
+    </div>
+</section>
+
+<section class="ticker">
+    <div>
+        LEARN SOMETHING NEW ✳ BUILD YOUR FUTURE ✳ STAY CURIOUS ✳ LEARN SOMETHING NEW ✳
+    </div>
+</section>
+
+<section class="explore section" id="explore">
+    <div class="section-top">
+        <div>
+            <span class="eyebrow">01 — DISCOVER</span>
+            <h2>Find your<br><span>next skill.</span></h2>
+        </div>
+        <p>Yangi bilimlar, yangi imkoniyatlar. O'zingizga mos yo'nalishni toping.</p>
+    </div>
+
+    <div class="search-row">
+        <input id="searchInput" type="text" placeholder="Search your next skill...">
+        <span>⌕</span>
+    </div>
+
+    <div class="category-row" id="categories">
+        <button class="category active" data-category="all">ALL COURSES</button>
+        <button class="category" data-category="tech">TECHNOLOGY</button>
+        <button class="category" data-category="creative">CREATIVE</button>
+        <button class="category" data-category="business">BUSINESS</button>
+    </div>
+
+    <div class="course-grid" id="courseGrid"></div>
+    <p id="emptyMessage">No courses found.</p>
+</section>
+
+<section class="manifesto">
+    <div class="manifesto-number">02 / THE MINDSET</div>
+    <h2>DON'T JUST<br>FOLLOW THE<br><span>FUTURE.</span></h2>
+    <div class="manifesto-bottom">
+        <span>CREATE IT YOURSELF.</span>
+        <p>Har bir yangi ko'nikma — kelajakka tashlangan yangi qadam.</p>
+    </div>
+</section>
+
+<section class="learning section" id="learning">
+    <div class="section-top">
+        <div>
+            <span class="eyebrow">02 — YOUR SPACE</span>
+            <h2>My learning<span>.</span></h2>
+        </div>
+        <span class="live-tag">● PERSONAL DASHBOARD</span>
+    </div>
+
+    <div class="learning-stats">
+        <div class="stat">
+            <span>ENROLLED</span>
+            <strong id="enrolledCount">00</strong>
+            <small>Selected courses</small>
+        </div>
+        <div class="stat">
+            <span>COMPLETED</span>
+            <strong id="completedCount">00</strong>
+            <small>Finished courses</small>
+        </div>
+        <div class="stat">
+            <span>TOTAL XP</span>
+            <strong id="xpCount">000</strong>
+            <small>Experience points</small>
+        </div>
+        <div class="stat">
+            <span>LEVEL</span>
+            <strong id="levelCount">01</strong>
+            <small>Your current rank</small>
+        </div>
+    </div>
+
+    <div class="learning-list" id="learningList"></div>
+</section>
+
+<section class="quiz-section section">
+    <div class="quiz-heading">
+        <span class="eyebrow">03 — CHALLENGE YOURSELF</span>
+        <h2>Think.<br>Answer.<br><span>Repeat.</span></h2>
+        <p>Bilimingizni tekshiring. Har bir to'g'ri javob sizga XP beradi.</p>
+    </div>
+
+    <div class="quiz-box">
+        <div class="quiz-header">
+            <span>NEXORA KNOWLEDGE TEST</span>
+            <span id="quizNumber">01 / 05</span>
+        </div>
+
+        <div class="quiz-line"><span id="quizLine"></span></div>
+
+        <h3 id="question">Question loading...</h3>
+
+        <div id="answers" class="answers"></div>
+
+        <div class="quiz-footer">
+            <span id="quizFeedback">SELECT YOUR ANSWER</span>
+            <button id="nextBtn" disabled>NEXT →</button>
+        </div>
+    </div>
+</section>
+
+<section class="community section" id="community">
+    <div class="community-top">
+        <span class="eyebrow">04 — COMMUNITY</span>
+        <span>GROW TOGETHER.</span>
+    </div>
+
+    <h2>Better minds.<br><span>Better future.</span></h2>
+
+    <div class="community-cards">
+        <div class="community-card">
+            <span>01 / LEARN</span>
+            <strong>Learn daily.</strong>
+            <p>Har kuni yangi bilim va ko'nikmalar.</p>
+            <div>↗</div>
+        </div>
+        <div class="community-card">
+            <span>02 / BUILD</span>
+            <strong>Build projects.</strong>
+            <p>O'rgangan bilimlaringizni amalda qo'llang.</p>
+            <div>↗</div>
+        </div>
+        <div class="community-card">
+            <span>03 / GROW</span>
+            <strong>Grow together.</strong>
+            <p>O'z ustingizda ishlashda davom eting.</p>
+            <div>↗</div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta">
+    <span>YOUR JOURNEY STARTS NOW.</span>
+    <h2>MAKE YOUR<br>MOVE<span>.</span></h2>
+    <a href="#explore">START LEARNING ↗</a>
+</section>
+
+</main>
+
+<footer>
+    <a class="logo" href="#home">NEXORA<span>®</span></a>
+    <p>© 2026 NEXORA. BUILT FOR THE FUTURE.</p>
+    <a href="#home">BACK TO TOP ↑</a>
+</footer>
+
+<div class="modal" id="courseModal">
+    <div class="modal-box">
+        <button id="closeModal">✕</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
